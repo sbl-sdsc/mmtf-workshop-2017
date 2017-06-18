@@ -12,9 +12,12 @@
 	<description>Structural Bioinformatics Training Workshop &amp; Hackathon 2017 - Application of Big Data Technology and 3D Visualization, San Diego Supercomputer Center/University of California, San DiegoJune 26 - 28, 2017</description>
 
 	<modules>
-		<module>3-basic-mmtf-spark</module>
+                <nodule>2-intro-spark</module>
+		<module>3-basic-spark</module>
 		<module>4-advanced-spark</module>
 		<module>5-machine-learning</module>
+                <module>6-biojava</module>
+                <module>7-biojava-spark</module>
 	</modules>
 	
 	<properties>

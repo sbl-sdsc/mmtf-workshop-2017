@@ -7,7 +7,7 @@
 	<artifactId>2-intro-spark</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-    <name>3-basic-spark</name>
+    <name>2-intro-spark</name>
     <description>Introduction to Apache Spark</description>
 	<url>http://mmtf.rcsb.org</url>
 
