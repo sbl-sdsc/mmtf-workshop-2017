@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>edu.sdsc</groupId>
-	<artifactId>3-basic-mmtf-spark</artifactId>
+	<artifactId>3-basic-spark</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-    <name>3-basic-mmtf-spark</name>
+    <name>3-basic-spark</name>
     <description>Basic excercises for using mmtf-spark</description>
 	<url>http://mmtf.rcsb.org</url>
 
