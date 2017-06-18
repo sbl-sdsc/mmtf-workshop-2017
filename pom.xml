@@ -3,14 +3,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>edu.sdsc.mmtf</groupId>
-	<artifactId>workshop2017</artifactId>
+	<groupId>edu.sdsc</groupId>
+	<artifactId>mmtf-workshop-2017</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
+	<name>mmtf-workshop-2017</name>
+	<url>http://www.etouches.com/mmtf2017</url>
+	<description>Structural Bioinformatics Training Workshop &amp; Hackathon 2017 - Application of Big Data Technology and 3D Visualization, San Diego Supercomputer Center/University of California, San DiegoJune 26 - 28, 2017</description>
 
-	<name>workshop2017</name>
-	<url>http://maven.apache.org</url>
-
+	<modules>
+		<module>3-basic-mmtf-spark</module>
+		<module>4-advanced-spark</module>
+		<module>5-machine-learning</module>
+	</modules>
+	
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<maven.enforcer.jdk-version>1.8</maven.enforcer.jdk-version>
@@ -18,8 +24,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
-		<junit.version>4.12</junit.version>
-		<mmtf-spark.version>0.0.1-SNAPSHOT</mmtf-spark.version>
+
 	</properties>
 
 	<repositories>
@@ -35,21 +40,6 @@
 		</repository>
 	</repositories>
 
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>edu.sdsc</groupId>
-			<artifactId>mmtf-spark</artifactId>
-			<version>${mmtf-spark.version}</version>
-		</dependency>
-	</dependencies>
-	<modules>
-		<module>3-basic-mmtf-spark</module>
-		<module>4-advanced-spark</module>
-		<module>5-machine-learning</module>
-	</modules>
+
+
 </project>
