@@ -9,7 +9,7 @@ public class Problem01 {
 
 	/**
 	 * Problem01: Count the number of PDB entries that contain L-protein and
-	 * D-Saccharide chains, but do not contain DNA and RNA chains.
+	 * D-saccharide chains, but do not contain DNA and RNA chains.
 	 * 
 	 * @author Peter Rose
 	 *
