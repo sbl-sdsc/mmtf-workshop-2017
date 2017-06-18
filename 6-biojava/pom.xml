@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>edu.sdsc</groupId>
-	<artifactId>5-biojava</artifactId>
+	<artifactId>6-biojava</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>5-biojava</name>
+	<name>6-biojava</name>
 	<description>Excercises using BioJava</description>
 	<url>http://biojava.org</url>
 

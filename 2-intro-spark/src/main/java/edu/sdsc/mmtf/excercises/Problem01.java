@@ -1,41 +1,30 @@
 package edu.sdsc.mmtf.excercises;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 
-import edu.sdsc.mmtf.spark.io.MmtfReader;
 
 public class Problem01 {
 
 	/**
-	 * Problem01: Count the number of PDB entries that contain L-protein and
-	 * D-saccharide chains, but do not contain DNA and RNA chains.
+	 * Problem01: Parallelize a list of items.
 	 * 
-	 * @author Peter Rose
+	 * @author 
 	 *
 	 */
 
 	public static void main(String[] args) {
 
-		String path = System.getProperty("MMTF_REDUCED");
-		if (path == null) {
-			System.err.println("Environment variable for Hadoop sequence file has not been set");
-			System.exit(-1);
-		}
-
 		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Problem01.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 		
-        long count = 0;
+		List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
+        // TODO 
+		// parallelize list as JavaRDD and print the numbers
 		
-        // TODO
-        // Count the number of PDB entries that contain L-protein and
-   	    // D-Saccharide chains, but do not contain DNA and RNA chains.
-//	    count = MmtfReader
-//				.readSequenceFile(path, sc)
-
-			
-		System.out.println("# Complexes that contain L-peptide and D-Saccharide: " + count);
 
 		sc.close();
 	}

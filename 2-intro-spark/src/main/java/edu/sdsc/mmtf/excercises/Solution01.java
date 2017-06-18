@@ -1,21 +1,18 @@
 package edu.sdsc.mmtf.excercises;
 
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaSparkContext;
+import java.util.Arrays;
+import java.util.List;
 
-import edu.sdsc.mmtf.spark.filters.ContainsDSaccharide;
-import edu.sdsc.mmtf.spark.filters.ContainsLProteinChain;
-import edu.sdsc.mmtf.spark.filters.ContainsPolymerChainType;
-import edu.sdsc.mmtf.spark.filters.NotFilter;
-import edu.sdsc.mmtf.spark.io.MmtfReader;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
 
 public class Solution01 {
 
 	/**
-	 * Problem01: Count the number of PDB entries that contain L-protein and
-	 * D-Saccharide chains, but do not contain DNA or RNA chains.
+	 * Problem01: Parallelize a list of items.
 	 * 
-	 * @author Peter Rose
+	 * @author 
 	 *
 	 */
 
@@ -29,26 +26,12 @@ public class Solution01 {
 
 		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution01.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
-
-        long start = System.nanoTime();
-        
-		long count = 0;
-				
-        // TODO
-        // Count the number of PDB entries that contain L-protein and
-   	    // D-Saccharide chains, but do not contain DNA and RNA chains.
-		count =	MmtfReader
-				.readSequenceFile(path, sc)
-			    .filter(new ContainsLProteinChain())
-				.filter(new ContainsDSaccharide())
-				.filter(new NotFilter(new ContainsPolymerChainType(ContainsPolymerChainType.DNA_LINKING)))
-				.filter(new NotFilter(new ContainsPolymerChainType(ContainsPolymerChainType.RNA_LINKING)))
-				.count();
-
-		System.out.println("# Complexes that contain L-peptide and D-Saccharide: " + count);
 		
-		long end = System.nanoTime();
-		System.out.println((end-start)/1E9 + " sec.");
+		List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
+        // TODO 
+		// parallelize list as JavaRDD and print the numbers
+		JavaRDD<Integer> distData = sc.parallelize(data);
+		distData.foreach(i -> System.out.println(i));
 		
 		sc.close();
 	}
