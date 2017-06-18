@@ -34,7 +34,9 @@ public class Solution01 {
         
 		long count = 0;
 				
-		 // TODO count the number of L-proteins that also contain D-Saccharide chains
+        // TODO
+        // Count the number of PDB entries that contain L-protein and
+   	    // D-Saccharide chains, but do not contain DNA and RNA chains.
 		count =	MmtfReader
 				.readSequenceFile(path, sc)
 			    .filter(new ContainsLProteinChain())
