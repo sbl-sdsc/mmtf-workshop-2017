@@ -41,10 +41,23 @@
 			<version>${junit.version}</version>
 		</dependency>
 		<dependency>
-        <groupId>org.biojava</groupId>
-        <artifactId>biojava-core</artifactId>
-        <version>4.2.4</version>
-      </dependency>
+			<groupId>org.biojava</groupId>
+			<artifactId>biojava-structure</artifactId>
+			<version>5.0.0-alpha8</version>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
