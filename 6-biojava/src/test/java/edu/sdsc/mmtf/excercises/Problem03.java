@@ -1,5 +1,5 @@
 package edu.sdsc.mmtf.excercises;
 
-public class Exercise02 {
+public class Problem03 {
 
 }
