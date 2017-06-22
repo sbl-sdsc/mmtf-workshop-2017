@@ -3,7 +3,7 @@ package edu.sdsc.mmtf.excercises;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 
-import edu.sdsc.mmtf.spark.filters.ContainsDSaccharide;
+import edu.sdsc.mmtf.spark.filters.ContainsDSaccharideChain;
 import edu.sdsc.mmtf.spark.filters.ContainsLProteinChain;
 import edu.sdsc.mmtf.spark.filters.ContainsPolymerChainType;
 import edu.sdsc.mmtf.spark.filters.NotFilter;
@@ -40,7 +40,7 @@ public class Solution01 {
 		count =	MmtfReader
 				.readSequenceFile(path, sc)
 			    .filter(new ContainsLProteinChain())
-				.filter(new ContainsDSaccharide())
+				.filter(new ContainsDSaccharideChain())
 				.filter(new NotFilter(new ContainsPolymerChainType(ContainsPolymerChainType.DNA_LINKING)))
 				.filter(new NotFilter(new ContainsPolymerChainType(ContainsPolymerChainType.RNA_LINKING)))
 				.count();
