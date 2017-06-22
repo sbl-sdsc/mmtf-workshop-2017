@@ -4,3 +4,5 @@
 *.project
 *.swp
 release.*
+*.iml
+.idea/*
