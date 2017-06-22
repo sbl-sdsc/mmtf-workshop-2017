@@ -1,4 +1,4 @@
-package edu.sdsc.mmtf.excercises;
+package edu.sdsc.solution01;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
