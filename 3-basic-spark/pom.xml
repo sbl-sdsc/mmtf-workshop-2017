@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
     <name>3-basic-spark</name>
-    <description>Basic excercises for using mmtf-spark</description>
+    <description>Basic exercises for using mmtf-spark</description>
 	<url>http://mmtf.rcsb.org</url>
 
 	<properties>
@@ -47,5 +47,18 @@
 			<version>${mmtf-spark.version}</version>
 		</dependency>
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

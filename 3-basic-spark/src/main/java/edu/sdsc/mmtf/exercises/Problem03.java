@@ -1,4 +1,4 @@
-package edu.sdsc.mmtf.excercises;
+package edu.sdsc.mmtf.exercises;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import edu.sdsc.mmtf.spark.filters.ContainsLProteinChain;
 import edu.sdsc.mmtf.spark.io.MmtfReader;
 import edu.sdsc.mmtf.spark.mappers.StructureToPolymerChains;
 
-public class Solution03 {
+public class Problem03 {
 
 	/**
 	 * Problem03: Count the total number of L-protein chains, the total
@@ -31,7 +31,7 @@ public class Solution03 {
 			System.exit(-1);
 		}
 
-		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution03.class.getSimpleName());
+		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Problem03.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
         long start = System.nanoTime();
@@ -40,16 +40,11 @@ public class Solution03 {
         // Count the total number of L-protein chains, the total
    	    // number of groups (residues) in those chains, and calculate the 
    	    // average number of groups per chain.	
-		JavaPairRDD<String, StructureDataInterface> chains = MmtfReader
-				.readSequenceFile(path, sc)
-				.flatMapToPair(new StructureToPolymerChains())
-			    .filter(new ContainsLProteinChain());
+
 		
-		long numChains = chains.count();
+		long numChains = 0;
 		
-		long numGroups = chains
-				.map(t -> t._2.getNumGroups())
-			    .reduce((a,b) -> a+b);
+		long numGroups = 0;
 
         System.out.println("# L-protein chains:  " + numChains);
         System.out.println("# groups (residues): " + numGroups);
