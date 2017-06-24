@@ -1,4 +1,4 @@
-package edu.sdsc.mmtf.excercises;
+package edu.sdsc.mmtf.exercises;
 
 import java.util.Arrays;
 import java.util.List;

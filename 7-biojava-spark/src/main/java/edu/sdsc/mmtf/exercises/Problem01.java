@@ -1,9 +1,7 @@
-package edu.sdsc.mmtf.excercises;
+package edu.sdsc.mmtf.exercises;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
-
-import edu.sdsc.mmtf.spark.io.MmtfReader;
 
 public class Problem01 {
 
