@@ -74,7 +74,7 @@ public class Solution02 {
 		ds.show(10);
 		
 		long end = System.nanoTime();
-		System.out.println("Time:     " + (end-start)/1E9 + "sec.");
+		System.out.println("Time:     " + (end-start)/1E9 + " sec.");
 
 		sc.close();
 	}

@@ -39,7 +39,7 @@ public class UnitCellExtractorProblem03 {
 
 	public static Dataset<Row> getDataset(JavaPairRDD<String, StructureDataInterface> structure) {
 		
-		// TODO explain why is a flatmap function used here
+		// TODO explain why a flatmap function is used here
 		
 		JavaRDD<Row> rows = structure.flatMap(new FlatMapFunction<Tuple2<String, StructureDataInterface>, Row>() {
 			private static final long serialVersionUID = -8235456885515776259L;
