@@ -23,7 +23,7 @@ public class Solution05 {
 		JavaPairRDD<String, StructureDataInterface> pdb = MmtfReader
 	        		.downloadMmtfFiles(pdbIds, sc);
 		
-		// TODO complete the code in the getMolecularWeight method (see below)
+		// TODO complete the code in the getHeavyAtomMolecularWeight method (see below)
 		
 		
 		// TODO print the molecular weight for the structures

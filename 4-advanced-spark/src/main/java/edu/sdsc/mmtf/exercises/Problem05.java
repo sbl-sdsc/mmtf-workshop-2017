@@ -23,11 +23,11 @@ public class Problem05 {
 		JavaPairRDD<String, StructureDataInterface> pdb = MmtfReader
 	        		.downloadMmtfFiles(pdbIds, sc);
 		
-		// TODO complete the code in the getMolecularWeight method (see below)
+		// TODO complete the code in the getHeavyAtomMolecularWeight method (see below)
 		
 		
 		// TODO print the molecular weight for the structures
-
+	
 		
 		// TODO filter by molecular weight < 20000
 		
@@ -39,13 +39,13 @@ public class Problem05 {
 	 * Calculates the total molecular weight for all atoms in a structure.
 	 * If a structure contains multiple models, only the first
 	 * model is considered. Note, this method is for training
-	 * purposes only. It does not take into account 
+	 * purposes only. It does not take into account
 	 * non-observed atoms, e.g., hydrogen atoms!
 	 * 
 	 * @param structure input structure
 	 * @return 
 	 */
-	private static double getMolecularWeight(StructureDataInterface structure) {
+	private static double getHeavyAtomMolecularWeight(StructureDataInterface structure) {
 		double molecularWeight = 0.0;
 
 		// Global indices that point into the flat (columnar) data structure
@@ -68,10 +68,15 @@ public class Problem05 {
 				for (int m = 0; m < structure.getNumAtomsInGroup(groupType); m++) {
 
 					// TODO get element symbol
-					String element = "";
+					String elementSymbol = structure.getGroupElementNames(groupType)[m];
 
-					// get atomic mass using the Element enumeration from BioJava
-					molecularWeight += Element.valueOf(element).getAtomicMass();
+					// Element is an enumeration from BioJava
+					Element element = Element.valueOf(elementSymbol);
+					
+					// consider only heavy atoms
+					if (element.isHeavyAtom()) {
+						molecularWeight += element.getAtomicMass();
+					}
 				}
 				groupIndex++; // update global group index
 			}
