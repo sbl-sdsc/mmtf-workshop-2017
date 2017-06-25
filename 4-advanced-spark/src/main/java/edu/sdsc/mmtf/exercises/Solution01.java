@@ -35,7 +35,7 @@ public class Solution01 {
 		// TODO show the schema of this dataset
 		ds.printSchema();
 
-		// TODO select structures that have a Ki *and* Kd value(s) 
+		// TODO select structures that have Ki *and* Kd value(s) 
 		// and print the first 25 records.
 		ds = ds.filter("(Ki IS NOT NULL AND Kd IS NOT NULL)");
 		ds.show(25);

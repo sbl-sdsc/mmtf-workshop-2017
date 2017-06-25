@@ -35,7 +35,7 @@ public class Problem01 {
 		// TODO show the schema of this dataset
 
 		
-		// TODO select structures that have a Ki *and* Kd value(s)
+		// TODO select structures that have Ki *and* Kd value(s)
 		// and print the first 25 records.
 
 
