@@ -3,10 +3,11 @@ package edu.sdsc.mmtf.exercises;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
 
 import java.util.Arrays;
 
-public class Problem03 {
+public class Solution03_2 {
 
 	/** Filter example: get even numbers from a sequence of integers ranging from 1 to 10
 	 * 
@@ -15,7 +16,7 @@ public class Problem03 {
 
 	public static void main(String[] args) {
 
-		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Problem03.class.getSimpleName());
+		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution03_2.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		// Parallelized with 2 partitions
@@ -24,6 +25,10 @@ public class Problem03 {
         // TODO 
 		// Get only even numbers from a sequence of integers ranging from 1 to 10
 
+		//Filter Predicate
+		Function<Integer, Boolean> filterPredicate = e -> e % 2 == 0;
+
+		rdd.filter( filterPredicate ).foreach(e -> System.out.println(e));
 
 		sc.close();
 	}
