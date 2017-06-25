@@ -32,7 +32,7 @@ public class Solution04 {
 		// For each integer create a string containing this integer
 		System.out.println("String for each number:");
 		rdd.map( e -> "Number "+ String.valueOf(e) )
-				.foreach(e -> System.out.print(e + " "));
+				.foreach(e -> System.out.print(e + "; "));
 		System.out.println("\n");
 
 		// TODO
