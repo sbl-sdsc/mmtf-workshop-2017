@@ -9,27 +9,28 @@ import scala.Tuple2;
 import java.util.Arrays;
 import java.util.List;
 
-public class Problem06 {
+public class Problem07 {
 
-	/** Use lambda expression to modify values in JavaPairRDD.
+	/**
+	 * Calculate the sum of values in JavaPairRDD.
 	 *
 	 * @author Yana Valasatava
 	 */
 
 	public static void main(String[] args) {
 
-		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Problem06.class.getSimpleName());
+		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Problem07.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
-		List<Tuple2<String, Integer>> data = Arrays.asList(
-				new Tuple2("first", 1),
-				new Tuple2("second", 2));
+		List<Tuple2<String, List<Integer>>> data = Arrays.asList(
+				new Tuple2("first", Arrays.asList(1, 2)),
+				new Tuple2("second", Arrays.asList(5, 3)));
 
 		JavaRDD rdd = sc.parallelize(data);
 		JavaPairRDD pairRdd = JavaPairRDD.fromJavaRDD(rdd);
 
 		// TODO
-		// use lambda expression to modify values in JavaPairRDD
+		// calculate the sum of values in JavaPairRDD
 
 
 		sc.close();
