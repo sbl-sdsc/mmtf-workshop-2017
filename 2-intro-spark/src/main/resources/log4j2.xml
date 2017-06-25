@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration status="WARN">
+
+	<appenders>
+		<Console name="console" target="SYSTEM_ERR">
+			<PatternLayout pattern="%d{HH:mm:ss} %-5level %logger{36} - %msg%n"/>
+		</Console>
+	</appenders>
+
+	<loggers>
+
+		<root level="info">
+			<appender-ref ref="console"/>
+		</root>
+
+		<!-- Spark -->
+		<Logger name="org.apache.spark" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="org.spark_project" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="org.apache.hadoop" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="org.apache.parquet" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<!-- Spark info messages -->
+
+		<Logger name="/jobs" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/jobs/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/jobs/job" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/jobs/job/kill" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/jobs/job/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/stages" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/stages/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/stages/stage" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/stages/stage/kill" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/stages/stage/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/stages/pool" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/stages/pool/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/storage" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/storage/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/storage/rdd" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/storage/rdd/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/environment" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/environment/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/executors" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/executors/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/executors/threadDump" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/executors/threadDump/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/static" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/metrics/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/SQL" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+		<Logger name="/SQL/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/SQL/execution" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/SQL/execution/json" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+		<Logger name="/static/sql" level="error" additivity="false">
+			<appender-ref ref="console"/>
+		</Logger>
+
+	</loggers>
+
+</configuration>
