@@ -12,7 +12,6 @@ public class Problem02 {
 	/** Read a text file.
 	 * 
 	 * @author Yana Valasatava
-	 *
 	 */
 
 	private String getDataFile() {
