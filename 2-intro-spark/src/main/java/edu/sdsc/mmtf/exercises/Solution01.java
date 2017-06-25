@@ -18,12 +18,6 @@ public class Solution01 {
 
 	public static void main(String[] args) {
 
-		String path = System.getProperty("MMTF_REDUCED");
-		if (path == null) {
-			System.err.println("Environment variable for Hadoop sequence file has not been set");
-			System.exit(-1);
-		}
-
 		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution01.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 		
