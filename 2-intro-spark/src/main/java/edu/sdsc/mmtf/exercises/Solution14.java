@@ -6,9 +6,9 @@ import org.apache.spark.sql.SparkSession;
 
 import static org.apache.spark.sql.functions.col;
 
-public class Solution12 {
+public class Solution14 {
 
-	/** Creating dataset example.
+	/** Querying dataset example.
 	 *
 	 * @author Yana Valasatava
 	 */
@@ -20,27 +20,27 @@ public class Solution12 {
 
 	public static void main(String[] args) {
 
-		SparkSession sparkSession = SparkSession.builder().master("local[*]").appName("app")
-				.config("spark.driver.maxResultSize", "4g")
-				.config("spark.executor.memory", "4g")
+		SparkSession sparkSession = SparkSession.builder()
+				.master("local[*]").appName("app")
 				.getOrCreate();
 
 		// TODO: create a dataset by reading a .csv file
-
-		Solution12 s = new Solution12();
+		Solution14 s = new Solution14();
 		String path = s.getDataFile();
 
 		Dataset<Row> data = sparkSession.read().option("header", "true").csv(path);
 
-		data.printSchema();
-		data.show(10);
-		System.out.println("Total number of rows: "+data.count());
+		// Register the DataFrame as a SQL temporary view and run SQL query
 
-		// TODO: use filter function to get genes living on negative strand
+		data.createOrReplaceTempView("table");
 
-		Dataset<Row> negStr = data.filter(col("orientation").equalTo("-"));
-		negStr.show(5);
-		System.out.println("Total number of rows for genes living on negative strand: "+negStr.count());
+		sparkSession.sql("SELECT * FROM table WHERE chromosome='chr1'").show();
+
+		sparkSession.sql("SELECT gene_name FROM table WHERE chromosome='chr1' GROUP BY gene_name").show();
+
+		// Use Dataset API
+
+		data.filter(col("chromosome").equalTo("chr1")).select(col("gene_name")).distinct().;
 
 		sparkSession.stop();
 	}

@@ -29,8 +29,9 @@ public class Problem12 {
 				.config("spark.debug.maxToStringFields", 80)
 				.getOrCreate();
 
-		// TODO
-		// read .csv file into dataframe
+		// TODO: create a dataset by reading a .csv file
+
+		// TODO: use filter function to get genes living on negative strand
 
 
 		sparkSession.stop();
