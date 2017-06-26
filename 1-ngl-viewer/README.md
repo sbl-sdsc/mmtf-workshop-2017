@@ -2,6 +2,8 @@
 
 Introduction to NGL Viewer/Library and the MMTF JavaScript API. View slides online [here](https://docs.google.com/presentation/d/16V7B10QgngpFZRSOvsILAZ-0HxfSCTswbyA1cNKgh4U/edit?usp=sharing)
 
+* Gitter chat room https://gitter.im/nglviewer/Lobby
+
 
 ## Resources
 
