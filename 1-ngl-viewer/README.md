@@ -21,6 +21,7 @@ Introduction to NGL Viewer/Library and the MMTF JavaScript API. View slides onli
   * Github repository https://github.com/arose/ngl
   * API docs & manual http://arose.github.io/ngl/api/
   * Examples Gallery https://arose.github.io/ngl/gallery/
+  * CodePen template https://codepen.io/pen?template=JNLMXb
   * CDN
     * https://unpkg.com/ngl (latest release)
     * https://unpkg.com/ngl@0.10.3
