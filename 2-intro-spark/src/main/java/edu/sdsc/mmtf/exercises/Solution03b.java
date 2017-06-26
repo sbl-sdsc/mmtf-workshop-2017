@@ -7,7 +7,7 @@ import org.apache.spark.api.java.function.Function;
 
 import java.util.Arrays;
 
-public class Solution03_2 {
+public class Solution03b {
 
 	/** Filter example: get even numbers from a sequence of integers ranging from 1 to 10
 	 * 
@@ -16,7 +16,7 @@ public class Solution03_2 {
 
 	public static void main(String[] args) {
 
-		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution03_2.class.getSimpleName());
+		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution03b.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		// Parallelized with 2 partitions
