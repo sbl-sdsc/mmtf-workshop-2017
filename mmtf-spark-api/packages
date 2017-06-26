@@ -1,0 +1,16 @@
+edu.sdsc.mmtf.spark.analysis
+edu.sdsc.mmtf.spark.datasets
+edu.sdsc.mmtf.spark.datasets.demos
+edu.sdsc.mmtf.spark.filters
+edu.sdsc.mmtf.spark.filters.demos
+edu.sdsc.mmtf.spark.incubator
+edu.sdsc.mmtf.spark.io.demos
+edu.sdsc.mmtf.spark.io
+edu.sdsc.mmtf.spark.mappers.demos
+edu.sdsc.mmtf.spark.mappers
+edu.sdsc.mmtf.spark.ml
+edu.sdsc.mmtf.spark.ml.demos
+edu.sdsc.mmtf.spark.rcsbfilters
+edu.sdsc.mmtf.spark.rcsbfilters.demos
+edu.sdsc.mmtf.spark.utils
+edu.sdsc.mmtf.spark.webservices
