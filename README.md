@@ -5,11 +5,13 @@ Workshop registration page: <https://www.etouches.com/mmtf2017>
 
 Prerequisites
 
-[Download the following files] (setup/FileDownload.pdf)
+[Download the following files](FileDownload.pdf)
 
 
-[Install the following software] (setup/SoftwareSetup.pdb)
+[Install the following software](SoftwareSetup.pdf)
 
 Workshop installation:
-[MacOS] (setup/GitHub_Eclipse_Setup_MacOS.pdf)
-[Windows] (setu/GitHub_Eclipse_Setup_Windows.pdf)
+
+[MacOS](GitHub_Eclipse_Setup_MacOS.pdf)
+
+[Windows](GitHub_Eclipse_Setup_Windows.pdf)
