@@ -20,8 +20,7 @@ public class Solution11 {
 		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution11.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
-		JavaRDD<String> rdd = sc.parallelize(
-				Arrays.asList("a", "b", "a", "a", "b", "b", "b", "b"));
+		JavaRDD<String> rdd = sc.parallelize(Arrays.asList("a", "b", "a", "a", "b", "b", "b", "b"));
 
 		JavaPairRDD<String, Integer> pairRdd = rdd.mapToPair(t -> new Tuple2<String, Integer>(t, 1));
 
