@@ -40,7 +40,7 @@ public class Solution14 {
 
 		// Use Dataset API
 
-		data.filter(col("chromosome").equalTo("chr1")).select(col("gene_name")).distinct().;
+		data.filter(col("chromosome").equalTo("chr1")).select(col("gene_name")).distinct();
 
 		sparkSession.stop();
 	}
