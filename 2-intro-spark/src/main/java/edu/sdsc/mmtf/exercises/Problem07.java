@@ -23,11 +23,11 @@ public class Problem07 {
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		List<Tuple2<String, List<Integer>>> data = Arrays.asList(
-				new Tuple2("first", Arrays.asList(1, 2)),
-				new Tuple2("second", Arrays.asList(5, 3)));
+				new Tuple2<String, List<Integer>>("first", Arrays.asList(1, 2)),
+				new Tuple2<String, List<Integer>>("second", Arrays.asList(5, 3)));
 
-		JavaRDD rdd = sc.parallelize(data);
-		JavaPairRDD pairRdd = JavaPairRDD.fromJavaRDD(rdd);
+		JavaRDD<Tuple2<String, List<Integer>>> rdd = sc.parallelize(data);
+		JavaPairRDD<String, List<Integer>> pairRdd = JavaPairRDD.fromJavaRDD(rdd);
 
 		// TODO
 		// calculate the sum of values in JavaPairRDD

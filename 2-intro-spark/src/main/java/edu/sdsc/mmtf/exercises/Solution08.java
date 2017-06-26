@@ -24,15 +24,18 @@ public class Solution08 {
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		List<Tuple2<String, Integer>> data = Arrays.asList(
-				new Tuple2("first", 2),
-				new Tuple2("second", 15));
+				new Tuple2<String, Integer>("first", 2),
+				new Tuple2<String, Integer>("second", 15));
 
-		JavaRDD rdd = sc.parallelize(data);
-		JavaPairRDD pairRdd = JavaPairRDD.fromJavaRDD(rdd);
+		JavaRDD<Tuple2<String, Integer>> rdd = sc.parallelize(data);
+		JavaPairRDD<String, Integer> pairRdd = JavaPairRDD.fromJavaRDD(rdd);
 
 		// TODO
 		// calculate +/-2 for values in JavaPairRDD
-		JavaPairRDD<Integer, String> newPairRdd = pairRdd.flatMapValues(new Function<Integer, Iterable<String>>() {
+		JavaPairRDD<String, String> newPairRdd = pairRdd.flatMapValues(new Function<Integer, Iterable<String>>() {
+
+			private static final long serialVersionUID = 6652037709401748205L;
+
 			@Override
 			public Iterable<String> call(Integer value) throws Exception {
 				List<String> list = new ArrayList<>();

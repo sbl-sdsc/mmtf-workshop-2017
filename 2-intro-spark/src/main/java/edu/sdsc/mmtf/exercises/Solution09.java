@@ -25,16 +25,18 @@ public class Solution09 {
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		List<Tuple2<String, Integer>> data = Arrays.asList(
-				new Tuple2("first", 2),
-				new Tuple2("second", 4));
+				new Tuple2<String, Integer>("first", 2),
+				new Tuple2<String, Integer>("second", 15));
 
-		JavaRDD rdd = sc.parallelize(data);
+		JavaRDD<Tuple2<String, Integer>> rdd = sc.parallelize(data);
 		JavaPairRDD<String, Integer> pairRdd = JavaPairRDD.fromJavaRDD(rdd);
 
 		// TODO
 		//
-		JavaPairRDD<String, String> newPairRdd = pairRdd
-				.flatMapToPair(new PairFlatMapFunction<Tuple2<String, Integer>, String, String>() {
+		JavaPairRDD<String, String> newPairRdd = pairRdd.flatMapToPair(new PairFlatMapFunction<Tuple2<String, Integer>, String, String>() {
+					
+			private static final long serialVersionUID = -1163467461714806699L;
+
 			@Override
 			public Iterator<Tuple2<String, String>> call(Tuple2<String, Integer> t) throws Exception {
 				List<Tuple2<String, String>> list = new ArrayList<>();

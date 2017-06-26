@@ -24,7 +24,7 @@ public class Problem11 {
 		JavaRDD<String> rdd = sc.parallelize(
 				Arrays.asList("a", "b", "a", "a", "b", "b", "b", "b"));
 
-		JavaPairRDD pairRdd = rdd.mapToPair(t -> new Tuple2<String, Integer>(t, 1));
+		JavaPairRDD<String, Integer> pairRdd = rdd.mapToPair(t -> new Tuple2<String, Integer>(t, 1));
 
 		// reduceByKey function merges the values for each key using an associative reduce function.
 

@@ -26,6 +26,9 @@ public class Solution03c {
 		// Get only even numbers from a sequence of integers ranging from 1 to 10
 
 		JavaRDD<Integer> rddFiltered = rdd.filter(new Function<Integer, Boolean>() {
+
+			private static final long serialVersionUID = 2524460370125430748L;
+
 			@Override
 			public Boolean call(Integer e) throws Exception {
 				return e % 2 == 0;

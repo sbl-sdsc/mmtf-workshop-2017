@@ -22,12 +22,12 @@ public class Problem10 {
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		List<Tuple2<String, String>> data = Arrays.asList(
-				new Tuple2("25/Jun/2017", "192.168.2.20"),
-				new Tuple2("26/Jun/2017", "127.0.0.1"),
-				new Tuple2("26/Jun/2017", "192.168.2.35"));
+				new Tuple2<String, String>("25/Jun/2017", "192.168.2.20"),
+				new Tuple2<String, String>("26/Jun/2017", "127.0.0.1"),
+				new Tuple2<String, String>("26/Jun/2017", "192.168.2.35"));
 
-		JavaRDD rdd = sc.parallelize(data);
-		JavaPairRDD pairRdd = JavaPairRDD.fromJavaRDD(rdd);
+		JavaRDD<Tuple2<String, String>> rdd = sc.parallelize(data);
+		JavaPairRDD<String, String> pairRdd = JavaPairRDD.fromJavaRDD(rdd);
 
 		// TODO
 		// count the number of requests every day

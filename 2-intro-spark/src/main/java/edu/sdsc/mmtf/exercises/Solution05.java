@@ -31,7 +31,7 @@ public class Solution05 {
 		JavaRDD<String> lines = sc.textFile(path);
 
 		JavaPairRDD<Integer, String> wordsCount = lines
-				.mapToPair(line -> new Tuple2(line.split(" ").length, line));
+				.mapToPair(line -> new Tuple2<Integer, String>(line.split(" ").length, line));
 
 		wordsCount.foreach(e -> System.out.println("Number of words in '"+ e._2+ "' is "+ e._1));
 

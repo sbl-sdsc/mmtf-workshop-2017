@@ -1,11 +1,10 @@
 package edu.sdsc.mmtf.exercises;
 
-import org.apache.spark.sql.SparkSession;
-
 import java.io.Serializable;
 
 public class Problem13Bean implements Serializable {
 
+	private static final long serialVersionUID = 838133521192207572L;
 	/** Data bean.
 	 *
 	 * @author Yana Valasatava

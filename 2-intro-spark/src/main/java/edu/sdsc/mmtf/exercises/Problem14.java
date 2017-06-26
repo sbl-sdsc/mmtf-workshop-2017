@@ -1,7 +1,5 @@
 package edu.sdsc.mmtf.exercises;
 
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
 public class Problem14 {
@@ -10,11 +8,6 @@ public class Problem14 {
 	 *
 	 * @author Yana Valasatava
 	 */
-
-	private String getDataFile() {
-		ClassLoader classLoader = getClass().getClassLoader();
-		return classLoader.getResource("data.csv").getFile();
-	}
 
 	public static void main(String[] args) {
 

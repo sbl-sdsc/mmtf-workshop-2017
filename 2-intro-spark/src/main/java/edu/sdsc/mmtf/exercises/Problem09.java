@@ -22,11 +22,11 @@ public class Problem09 {
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
 		List<Tuple2<String, Integer>> data = Arrays.asList(
-				new Tuple2("first", 2),
-				new Tuple2("second", 4));
+				new Tuple2<String, Integer>("first", 2),
+				new Tuple2<String, Integer>("second", 4));
 
-		JavaRDD rdd = sc.parallelize(data);
-		JavaPairRDD pairRdd = JavaPairRDD.fromJavaRDD(rdd);
+		JavaRDD<Tuple2<String, Integer>> rdd = sc.parallelize(data);
+		JavaPairRDD<String, Integer> pairRdd = JavaPairRDD.fromJavaRDD(rdd);
 
 		// TODO
 		//
