@@ -17,4 +17,3 @@ Workshop installation:
 [Windows](setup/GitHub_Eclipse_Setup_Windows.pdf)
 
 
-[MMTF-Spark API Documentation](mmtf-spark-api/index.html)
