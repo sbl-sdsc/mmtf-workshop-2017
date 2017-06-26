@@ -27,8 +27,7 @@ public class Solution11 {
 
 		// TODO
 		// count how many times each letter occurs
-		pairRdd.reduceByKey((x, y) -> x + y)
-				.foreach(t -> System.out.println(t._1 + ": " + t._2));
+		pairRdd.reduceByKey((x, y) -> x + y).foreach(t -> System.out.println(t._1 + ": " + t._2));
 
 		sc.close();
 	}

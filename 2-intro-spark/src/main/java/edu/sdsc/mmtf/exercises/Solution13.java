@@ -25,7 +25,6 @@ public class Solution13 {
 		list.add(new Problem13Bean("three", 3, 3.0));
 
 		// TODO: create a dataset from list
-		Encoder<Problem13Bean> encoder = Encoders.bean(Problem13Bean.class);
 		Dataset<Row> data = sparkSession.createDataFrame(list, Problem13Bean.class);
 		data.printSchema();
 

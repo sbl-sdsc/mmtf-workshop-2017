@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Problem08 {
 
-	/** Calculate +/-2 for values in JavaPairRDD.
+	/** Calculate +/-2 for each value in JavaPairRDD.
 	 *
 	 * @author Yana Valasatava
 	 */

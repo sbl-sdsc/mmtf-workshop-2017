@@ -6,7 +6,6 @@ import org.apache.spark.api.java.JavaSparkContext;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class Problem02 {
 
 	/** Read a text file.

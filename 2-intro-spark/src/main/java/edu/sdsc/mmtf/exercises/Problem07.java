@@ -11,8 +11,7 @@ import java.util.List;
 
 public class Problem07 {
 
-	/**
-	 * Calculate the sum of values in JavaPairRDD.
+	/** Calculate the sum of values in JavaPairRDD.
 	 *
 	 * @author Yana Valasatava
 	 */
