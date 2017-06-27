@@ -48,11 +48,11 @@ public class Solution02 {
 		}
 
 		// Print the results to the console
-		System.out.println("The AU of the hemoglobin structure 2HHB contains: " 
-				+ models + " models, " + chains
-				+ " polymer chains in model 1, and " + aminoacids 
-				+ " amino acids and " + oxygens
-				+ " oxygen atoms in chain A.");
+		System.out.println(String.format(
+				"The AU of the hemoglobin structure 2HHB contains: "
+				+ "%d models, %d polymer chains in model 1, and "
+				+ "%d amino acids and %d oxygen atoms in chain A.",
+				models, chains, aminoacids, oxygens));
 
 	}
 

@@ -26,8 +26,8 @@ public class Solution03 {
 
 	public static void main(String[] args) throws IOException, StructureException {
 
-		// TODO download the biological assembly number 1 of 1OUT using StructureIO		
-		Structure structure = StructureIO.getBiologicalAssembly("1out", 1, true);
+		// TODO download the biological assembly number 1 of 1hv4 using StructureIO
+		Structure structure = StructureIO.getBiologicalAssembly("1hv4", 1,true);
 
 		// Initialize parameters to use for the symmetry calculation
 		SubunitClustererParameters cp = new SubunitClustererParameters();

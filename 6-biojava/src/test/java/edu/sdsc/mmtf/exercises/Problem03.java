@@ -25,7 +25,7 @@ public class Problem03 {
 
 	public static void main(String[] args) throws IOException, StructureException {
 
-		// TODO download the biological assembly number 1 of 1OUT using StructureIO		
+		// TODO download the biological assembly number 1 of 1hv4 using StructureIO		
 		Structure structure = null;
 
 		// Initialize parameters to use for the symmetry calculation

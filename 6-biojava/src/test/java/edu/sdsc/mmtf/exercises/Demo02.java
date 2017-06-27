@@ -48,10 +48,10 @@ public class Demo02 {
 		
 		//System.out.println(lysozyme);
 		
-		try(PrintWriter out = new PrintWriter("/Users/aleixlafita/Downloads/148l_biojava.pdb")){
-		    out.println(lysozyme.toPDB());
-		    out.close();
-		}
+		PrintWriter out = new PrintWriter(
+				"/Users/aleixlafita/Downloads/148l_biojava.pdb");
+		out.println(lysozyme.toPDB());
+		out.close();
 
 	}
 
