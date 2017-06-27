@@ -3,17 +3,15 @@ package edu.sdsc.mmtf.exercises;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 
-import edu.sdsc.mmtf.spark.filters.ContainsDSaccharideChain;
 import edu.sdsc.mmtf.spark.filters.ContainsLProteinChain;
-import edu.sdsc.mmtf.spark.filters.ContainsPolymerChainType;
-import edu.sdsc.mmtf.spark.filters.NotFilter;
 import edu.sdsc.mmtf.spark.io.MmtfReader;
+import edu.sdsc.mmtf.spark.mappers.StructureToBioJava;
+import edu.sdsc.mmtf.spark.mappers.StructureToPolymerChains;
 
 public class Solution01 {
 
 	/**
-	 * Problem01: Count the number of PDB entries that contain L-protein and
-	 * D-Saccharide chains, but do not contain DNA or RNA chains.
+	 * Problem01: Calculate DSSP secondary structure for protein chains.
 	 * 
 	 * @author Peter Rose
 	 *
@@ -21,34 +19,28 @@ public class Solution01 {
 
 	public static void main(String[] args) {
 
-		String path = System.getProperty("MMTF_REDUCED");
+		String path = System.getProperty("MMTF_FULL");
 		if (path == null) {
-			System.err.println("Environment variable for Hadoop sequence file has not been set");
+			System.err.println("Path for full Hadoop sequence file has not been set");
 			System.exit(-1);
 		}
 
 		SparkConf conf = new SparkConf().setMaster("local[*]").setAppName(Solution01.class.getSimpleName());
 		JavaSparkContext sc = new JavaSparkContext(conf);
 
-        long start = System.nanoTime();
-        
-		long count = 0;
-				
-        // TODO
-        // Count the number of PDB entries that contain L-protein and
-   	    // D-Saccharide chains, but do not contain DNA and RNA chains.
-		count =	MmtfReader
-				.readSequenceFile(path, sc)
-			    .filter(new ContainsLProteinChain())
-				.filter(new ContainsDSaccharideChain())
-				.filter(new NotFilter(new ContainsPolymerChainType(ContainsPolymerChainType.DNA_LINKING)))
-				.filter(new NotFilter(new ContainsPolymerChainType(ContainsPolymerChainType.RNA_LINKING)))
-				.count();
+        // take a 0.5% random sample
+        double fraction = 0.005;
+		long seed = 123;
 
-		System.out.println("# Complexes that contain L-peptide and D-Saccharide: " + count);
-		
-		long end = System.nanoTime();
-		System.out.println((end-start)/1E9 + " sec.");
+		// TODO write a comment after each line
+		MmtfReader
+				.readSequenceFile(path, fraction, seed, sc) // read random sample
+				.filter(new ContainsLProteinChain()) // at least 1 protein chain required
+				.flatMapToPair(new StructureToPolymerChains()) // split into polymer chains
+				.filter(new ContainsLProteinChain()) // make sure this chain is a protein
+				.mapValues(new StructureToBioJava()) // convert to a BioJava structure
+				.mapValues(new BioJavaStructureToDssp()) // calculate DSSP secondary structure
+				.foreach(t -> System.out.println(t)); // print <pdbId.chainName>, DSSP string pairs
 		
 		sc.close();
 	}
