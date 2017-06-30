@@ -7,10 +7,13 @@ This 3-day hands-on workshop introduces participants to the development of fast 
 This workshop is held at the University of California, San Diego and hosted by the Structural Bioinformatics Laboratory at SDSC in collaboration with the RCSB Protein Data Bank.
 
 Workshop registration page: <https://www.etouches.com/mmtf2017>
-Registration is closed. A second workshop will be held early 2017. Sign up
-on our mailing list for announcements: <http://mmtf.rcsb.org>.
+Registration is closed. A second workshop will be held early 2017.
 
-For question about this workshop or to pregister for the second workshop email:  <mmtf@rcsb.org>.
+For question about this workshop or to preregister for the second workshop email:  <mmtf@rcsb.org>.
+
+[Join the MMTF-Usersmailing list](<https://groups.google.com/a/rcsb.org/forum/#!forum/mmtf-users>)
+
+<a href="https://twitter.com/mmtf_spec" class="twitter-follow-button" data-show-count="false">Follow @mmtf_spec</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Workshop Outcomes
 [Hackathon Summary Slides](9-hackathon/MMTF2017-Summary.pdf)
@@ -29,11 +32,11 @@ For question about this workshop or to pregister for the second workshop email: 
 
 [Update your GitHub fork](2-intro-spark/MMTF2017-Software_installation.pdf)
 
-# How to Cite this work
+# How to Cite this Work
 
-Bradley AR, Rose AS, Pavelka A, Valasatava Y, Duarte JM, Prlić A, Rose PW (2017) MMTF - an efficient file format for the transmission, visualization, and analysis of macromolecular structures. PLOS Computational Biology 13(6): e1005575. doi: [10.1371/journal.pcbi.1005575](https://doi.org/10.1371/journal.pcbi.100557)
+Bradley AR, Rose AS, Pavelka A, Valasatava Y, Duarte JM, Prlić A, Rose PW (2017) MMTF - an efficient file format for the transmission, visualization, and analysis of macromolecular structures. PLOS Computational Biology 13(6): e1005575. doi: [10.1371/journal.pcbi.1005575](https://doi.org/10.1371/journal.pcbi.1005575)
 
-Valasatava Y, Bradley AR, Rose AS, Duarte JM, Prlić A, Rose PW (2017) Towards an efficient compression of 3D coordinates of macromolecular structures. PLOS ONE 12(3): e0174846. doi: [10.1371/journal.pone.01748464}(https://doi.org/10.1371/journal.pone.0174846)
+Valasatava Y, Bradley AR, Rose AS, Duarte JM, Prlić A, Rose PW (2017) Towards an efficient compression of 3D coordinates of macromolecular structures. PLOS ONE 12(3): e0174846. doi: [10.1371/journal.pone.01748464](https://doi.org/10.1371/journal.pone.0174846)
 
 Rose AS, Bradley AR, Valasatava Y, Duarte JM, Prlić A, Rose PW (2016) Web-based molecular graphics for large complexes. In Proceedings of the 21st International Conference on Web3D Technology (Web3D '16). ACM, New York, NY, USA, 185-186. doi: [10.1145/2945292.2945324](https://doi.org/10.1145/2945292.2945324)
 
