@@ -9,7 +9,7 @@ This workshop is held at the University of California, San Diego and hosted by t
 Workshop registration page: <https://www.etouches.com/mmtf2017> 
 (registration is closed) 
 
-A second workshop will be held early 2017.
+A second workshop will be held early 2018.
 
 For question about this workshop or to preregister for the second workshop:
 
@@ -34,7 +34,7 @@ For question about this workshop or to preregister for the second workshop:
 
 [Update your GitHub fork](2-intro-spark/MMTF2017-Software_installation.pdf)
 
-# How to Cite this Work
+## How to Cite this Work
 
 Bradley AR, Rose AS, Pavelka A, Valasatava Y, Duarte JM, Prlić A, Rose PW (2017) MMTF - an efficient file format for the transmission, visualization, and analysis of macromolecular structures. PLOS Computational Biology 13(6): e1005575. doi: [10.1371/journal.pcbi.1005575](https://doi.org/10.1371/journal.pcbi.1005575)
 
@@ -42,5 +42,5 @@ Valasatava Y, Bradley AR, Rose AS, Duarte JM, Prlić A, Rose PW (2017) Towards a
 
 Rose AS, Bradley AR, Valasatava Y, Duarte JM, Prlić A, Rose PW (2016) Web-based molecular graphics for large complexes. In Proceedings of the 21st International Conference on Web3D Technology (Web3D '16). ACM, New York, NY, USA, 185-186. doi: [10.1145/2945292.2945324](https://doi.org/10.1145/2945292.2945324)
 
-# Workshop Funding
+## Workshop Funding
 This workshop was supported by the National Cancer Institute of the National Institutes of Health under Award Number U01CA198942. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.
