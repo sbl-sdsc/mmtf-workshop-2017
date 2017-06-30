@@ -6,14 +6,18 @@ This 3-day hands-on workshop introduces participants to the development of fast 
 
 This workshop is held at the University of California, San Diego and hosted by the Structural Bioinformatics Laboratory at SDSC in collaboration with the RCSB Protein Data Bank.
 
-Workshop registration page: <https://www.etouches.com/mmtf2017>
-Registration is closed. A second workshop will be held early 2017.
+Workshop registration page: <https://www.etouches.com/mmtf2017> 
+(registration is closed) 
 
-For question about this workshop or to preregister for the second workshop email:  <mmtf@rcsb.org>.
+A second workshop will be held early 2017.
 
-[Join the MMTF-Usersmailing list](<https://groups.google.com/a/rcsb.org/forum/#!forum/mmtf-users>)
+For question about this workshop or to preregister for the second workshop:
 
-<a href="https://twitter.com/mmtf_spec" class="twitter-follow-button" data-show-count="false">Follow @mmtf_spec</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+[Email](<mmtf@rcsb.org>)
+
+[Join the MMTF-Users mailing list](<https://groups.google.com/a/rcsb.org/forum/#!forum/mmtf-users>)
+
+[Follow us on Twitter](<a href="https://twitter.com/mmtf_spec" class="twitter-follow-button" data-show-count="false">Follow @mmtf_spec</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></scripta)>
 
 # Workshop Outcomes
 [Hackathon Summary Slides](9-hackathon/MMTF2017-Summary.pdf)
