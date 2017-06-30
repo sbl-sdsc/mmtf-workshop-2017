@@ -13,7 +13,7 @@ A second workshop will be held early 2018.
 
 For question about this workshop or to preregister for the second workshop:
 
-[Email](mmtf@rcsb.org)
+[Email](mailto://mmtf@rcsb.org)
 
 [Join the MMTF-Users mailing list](https://groups.google.com/a/rcsb.org/forum/#!forum/mmtf-users)
 
