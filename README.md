@@ -19,18 +19,14 @@ For question about this workshop or to preregister for the second workshop:
 
 [Follow us on Twitter @mmtf_spec](https://twitter.com/mmtf_spec)
 
-<a href="https://twitter.com/mmtf_spec" class="twitter-follow-button" data-show-count="false">Follow @mmtf_spec</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-# Workshop Outcomes
+## Workshop Outcomes
 [Hackathon Summary Slides](9-hackathon/MMTF2017-Summary.pdf)
 
-# Software Installation
+## Software Installation
 
 [Download the following files](setup/FileDownload.pdf)
 
-
 [Install the following software](setup/SoftwareSetup.pdf)
-
 
 [MacOS setup for GitHub and Eclipse](setup/GitHub_Eclipse_Setup_MacOS.pdf)
 
