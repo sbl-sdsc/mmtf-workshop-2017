@@ -17,7 +17,7 @@ For question about this workshop or to preregister for the second workshop:
 
 [Join the MMTF-Users mailing list](https://groups.google.com/a/rcsb.org/forum/#!forum/mmtf-users)
 
-[Follow us on Twitter @mmtf_spec](https://twitter.com/mmtf_spec" class="twitter-follow-button" data-show-count="false")
+[Follow us on Twitter @mmtf_spec](https://twitter.com/mmtf_spec)
 
 # Workshop Outcomes
 [Hackathon Summary Slides](9-hackathon/MMTF2017-Summary.pdf)
