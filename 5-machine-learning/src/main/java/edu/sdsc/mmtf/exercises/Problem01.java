@@ -18,7 +18,7 @@ import edu.sdsc.mmtf.spark.datasets.SecondaryStructureExtractor;
 import edu.sdsc.mmtf.spark.filters.ContainsLProteinChain;
 import edu.sdsc.mmtf.spark.io.MmtfReader;
 import edu.sdsc.mmtf.spark.mappers.StructureToPolymerChains;
-import edu.sdsc.mmtf.spark.ml.SequenceWord2VecEncoder;
+import edu.sdsc.mmtf.spark.ml.ProteinSequenceEncoder;
 import edu.sdsc.mmtf.spark.rcsbfilters.BlastClusters;
 
 /**
@@ -89,10 +89,12 @@ public class Problem01 {
 		// improves the predictions
 		
 		// create a Word2Vector representation of the protein sequences
+		ProteinSequenceEncoder encoder = new ProteinSequenceEncoder(data);
 		int n = 2; // create 2-grams
 		int windowSize = 25; // 25-amino residue window size for Word2Vector
 		int vectorSize = 50; // dimension of feature vector	
-		data = SequenceWord2VecEncoder.encode(data, n, windowSize, vectorSize).cache();
+		data = encoder.overlappingNgramWord2VecEncode(n, windowSize, vectorSize).cache();
+		
 		data.show(25);
 
 		// keep only a subset of relevant fields for further processing
