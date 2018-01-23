@@ -19,7 +19,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
 		<junit.version>4.12</junit.version>
-		<mmtf-spark.version>0.0.1-SNAPSHOT</mmtf-spark.version>
+		<mmtf-spark.version>0.1.0-alpha.1</mmtf-spark.version>
 	</properties>
 
 	<repositories>

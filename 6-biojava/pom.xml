@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>org.biojava</groupId>
 			<artifactId>biojava-structure-gui</artifactId>
-			<version>5.0.0-alpha8</version>
+			<version>5.0.0-alpha13</version>
 		</dependency>
 	</dependencies>
 
